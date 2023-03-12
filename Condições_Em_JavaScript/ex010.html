@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="style010.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descubra a estação do ano</h1>
+    <button onclick="informe()">Informe o mês aqui</button>
+    <p id="res">Clique no botão acima para informar o mês.</p>
+
+    <script>
+        function informe(){
+            var estacao
+            var res = window.document.querySelector('p#res')
+            var mes = window.prompt('Digite o mês em extenso (ex: Setembro)')
+            
+            switch(mes.toUpperCase()){
+                case 'JANEIRO':  case 'FEVEREIRO':  case  'MARÇO':
+                    estacao = 'INVERNO'  
+                    break;
+                case 'ABRIL': case 'MAIO': case'JUNHO': 
+                    estacao = 'PRIMAVERA'
+                    break;
+
+                 case 'JULHO': case 'AGOSTO': case 'SETEMBRO':
+                    estacao = 'VERÃO'
+                    break;
+
+                case 'OUTUBRO': case 'NOVEMBRO': case 'DEZEMBRO':
+                    estacao = 'OUTONO'
+                    break;
+
+                default:
+                    estacao = 'indefinida' 
+                    break;
+            }
+            res.innerHTML = `<p>No mês de <mark> ${mes}</mark>, estação <mark> <strong>${estacao}</strong> </mark></p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style009.css">
+</head>
+<body>
+    <h1> Múltiplas ações</h1>
+    <button onclick="calcular()"> Clique para Iniciar</button>
+    <p id="res">Clique no botão acima para começar.</p>
+
+
+    <script>
+        function calcular(){
+            var res = document.getElementById('res');
+            var number1 = Number(window.prompt('Primeiro valor: '))
+            var number2 = Number(window.prompt('Segundo Valor: '))
+            var escolha = Number(window.prompt(`Valores informados: ${number1} e ${number2}.\nO que vamos fazer?\n|1| Somar\n|2| Subtrair\n|3| Multiplicar\n|4| Dividir`))
+            res.innerHTML =  `<h2>Calculando...</h2>` 
+            switch(escolha){
+                case 1:
+                    res.innerHTML +=  `<p>${number1} + ${number2} = ${number1 + number2}</p> `
+                    break;
+                case 2:
+                    res.innerHTML +=  `<p>${number1} - ${number2} = ${number1 - number2}</p> `
+                    break;
+                case 3:
+                    res.innerHTML +=  `<p>${number1} * ${number2} = ${number1 * number2}</p> `
+                    break;
+                case 4:
+                res.innerHTML +=  `<p>${number1} / ${number2} = ${number1 / number2}</p> `
+                break;
+            
+                default:
+                res.innerHTML +=  `<p>OPÇÃO INVÁLIDA! Voê digitou ${number1} e ${number2}, mas não sei o que fazer com eles </p> `
+            }
+            
+
+        }
+    </script>
+
+</body>
+</html>
