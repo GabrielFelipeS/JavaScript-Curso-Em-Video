@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="textura" href="style009.css">
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+
+    <button onclick="contas()">Clique para calcular</button>
+    <p id="texto"> O resultado vai aparecer aqui...</p>
+    
+    <script>
+        function contas(){
+            var number = window.prompt("Digite um número: ")
+            var contas = window.document.getElementById('texto')
+
+            contas.innerHTML = 
+            `O número a ser analisado aqui é o <strong>${number}</strong>
+            <hr/>`
+            contas.innerHTML += ` <p>O valor absoluto é ${Math.abs(number)}</p>`
+            contas.innerHTML += `<p>A parte inteira é ${Math.trunc(number)}</p>`
+            contas.innerHTML += ` <p>O valor inteiro mais próximo é ${Math.round(number)}</p>`
+            contas.innerHTML += `<p>A raiz quadrada é ${Math.sqrt(number)} </p>`
+            contas.innerHTML += `<p>A raiz cubida é ${Math.cbrt(number)}</p>`
+            contas.innerHTML += `<p>O valor de ${numer}<sup>2</sup> é ${Math.pow(number, 2)}</p>`
+            contas.innerHTML += `<p>O valor de ${numer}<sup>3</sup> é ${Math.pow(number, 3)}</p>`
+        }
+       
+            
+    </script>
+</body>
+</html>

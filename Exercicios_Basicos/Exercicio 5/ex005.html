@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bloco{
+            font: normal 15pt Arial;
+            background-color: rgb(187, 185, 185);
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;        
+        }
+        #modificar{
+            font: normal 12pt Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <div id="bloco">Clique para calcular</div>
+</br>
+    <di id="modificar"> O resultado vem aqui...</di>
+    <script>
+        window.alert("Seja bem-vindo(a) ao meu site!")
+        var bloco = window.document.getElementById('bloco')
+        var texto = window.document.getElementById('modificar')
+
+        bloco.addEventListener('click', clicar)
+
+        function clicar() {
+            var numero = Number(window.prompt("Digite um número:"))
+            var dobro = numero * 2
+            var metade = numero / 2
+
+            texto.innerHTML = `O dobro de ${numero} é ${dobro} e a metade é ${metade}`
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>
